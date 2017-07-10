@@ -11,12 +11,11 @@ import importlib
 from django.apps import AppConfig
 
 
-class PootlePluginDemoConfig(AppConfig):
+class PootlePluginCSVConfig(AppConfig):
 
-    name = "pootle_plugin_demo"
-    verbose_name = "Pootle plugin demo app"
+    name = "pootle_plugin_csv"
+    verbose_name = "Pootle plugin for CSV file support"
 
     def ready(self):
-        importlib.import_module("pootle_plugin_demo.models")
-        importlib.import_module("pootle_plugin_demo.providers")
-        importlib.import_module("pootle_plugin_demo.getters")
+        importlib.import_module("pootle_plugin_csv.models")
+        importlib.import_module("pootle_plugin_csv.providers")
